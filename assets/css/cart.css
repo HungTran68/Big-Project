@@ -1,0 +1,840 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* global css */
+  body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  }
+  
+  .header-top{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    border-bottom: .5px solid black;
+    position: sticky;
+    top:0;
+    background-color: white;
+    z-index: 5;
+  }
+  
+  .container-fluid{
+    width: 85%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  
+  /* left-header------------------------------------ */
+  
+  .left-header-top .logo-kfc img{
+    width: 79px;
+  }
+  
+  .left-header-top .logo-kfc .see-more {
+    display: none;
+  }
+  
+  .left-header-top{
+    display: flex;
+    align-items: center;
+  }
+  
+  /* list-option */
+  
+  .left-header-top .list-options{
+    display: flex;
+    align-items: center;
+    padding-top: 8px; /*giai quyet*/
+  }
+  
+  .left-header-top .list-options ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .left-header-top .list-options ul li:not(:last-child){
+    margin-right: 28px;
+  }
+  
+  .left-header-top .list-options ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 660;
+    position: relative;
+  }
+  
+  
+  /* hover:- text-decoration:underline */
+  .list-options ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%) scaleX(0); 
+    width: 100%; 
+    height: 1.2px; 
+    background-color: black; 
+    transition: transform 0.8s ease;
+  }
+  
+  .list-options ul li a:hover::after{
+    transform: translateX(-50%) scaleX(1);
+  }  
+  
+  /* center header MOBILE---------------------- */
+  .center-header-mobile-logo{
+    display: none;
+  
+  }
+  
+  /* right-header-top------------------- */
+  
+  .right-header-top{
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  /* button-booking ------ header*/
+  .right-header-top .button-booking button{
+    padding: 12px 24px;
+    border: none;
+    background-color: #E4002B;
+    color: white;
+    font-weight: 660;
+    border-radius: 24px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 2s ease;
+  }
+  
+  .right-header-top .user i, .right-header-top .cart i, .right-header-top .list-menu i{
+    font-size: 24px;
+    cursor: pointer;
+    
+  } 
+  
+  .right-header-top .button-booking button.show{
+  opacity: 1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* icons -- magin */
+  .right-header-top div:nth-child(1){
+    margin-right: 4px;
+  }
+  
+  .right-header-top div:nth-child(3){
+    margin-right: 8px;
+  }
+  
+  .right-header-top div:nth-child(4){
+    margin-right: 8px;
+  }
+  
+  .right-header-top .language{
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 24px;
+  }
+  
+  
+  .right-header-top div i {
+    font-size: 24px;
+  }
+  /* ===================================== */
+
+  .box-bill{
+    width: 100%;
+  }
+
+  .wrap-bill{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+
+  /* ================================= */
+
+  
+  /* FOOTER SECTIONS */
+
+.footer-main{
+    width: 100%;
+    background-color: #202124;
+    padding-top: 50px;
+    }  
+    
+    .wrap-container{
+    display: flex;
+    justify-content:space-between ;
+    }
+    
+    .wrap-container .column h6 {
+    color: #FFFFFF;
+    font-weight: bolder;
+    }
+    
+    .column ul{
+    list-style: none;
+    padding-left: 0;
+    }
+    
+    .column ul li{
+    color: #dddada;
+    font-size: 14px;
+    line-height: 28px;
+    cursor: pointer;
+    }
+    
+    .column ul li:hover{
+    color: #FFFFFF;
+    }
+    
+    .wrap-container .column .wrap-devides{
+    display: flex;
+    }
+    
+    
+    
+    .wrap-container .column .wrap-devides div img{
+    width: 136px;
+    height: 42px;
+    border: .1px solid #6e6d6d;
+    }
+    
+    /* last-section-footer - address */
+    
+    .box-social-icons{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .box-social-icons div p {
+    color: #e2e0e0;
+    font-size: 10px;
+    }
+    
+    .box-social-icons .icons-social {
+    display: flex;
+    }
+    
+    .box-social-icons .icons-social div i{
+    font-size: xx-large;
+    color: #FFFFFF;
+    /* margin-left: 16px; */
+    transition: transform 1s ease;
+    }
+    
+    .box-social-icons .icons-social div:hover i{
+    transform: rotate(360deg);
+    }
+    
+    .box-social-icons .icons-social > div{
+    margin-right: 16px;
+    } 
+    
+    .box-social-icons .icons-social > div:last-child{
+    margin-right: 0px;
+    }
+    
+    .container hr{
+    color: #ffffff;
+    }
+    
+    .container .wrap-footer-container{
+    padding-right: 160px;
+    margin-top: 40px;
+    }
+    
+    .container .wrap-footer-container .box-address{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .container .wrap-footer-container .box-address .left-box-address {
+    color: #dddada;
+    }
+    
+    .container .wrap-footer-container .box-address .right-box-address{
+    margin-top: 40px;
+    }
+    
+    .items{
+    width: 12px;
+    height: 36px;
+    background-color: #dddada;
+    border: 1px solid #dddada;
+    /* margin-right: 10px; */
+    margin: 24px 4px 0 4px;
+    }
+    
+    .last-box{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    }
+    
+    .box-social-icons .icons-social div i{
+    font-size: xx-large;
+    color: #FFFFFF;
+    /* margin-left: 16px; */
+    transition: transform 1s ease;
+    }
+    
+    .box-social-icons .icons-social div:hover i{
+    transform: rotate(360deg);
+    }
+    
+    /* <!-- popup see more --> */
+    
+    
+    .right-box-see-more{
+    width: 360px;
+    height: auto;
+    border: 1px solid rgb(236, 236, 236);
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    overflow-y: auto;
+    top:0;
+    right: -100%;
+    z-index: 5;
+    box-shadow: 2px 2px 2px 2px rgba(122, 119, 119, 0.5);
+    height: 100%;
+    }
+    
+    .wrap-box{
+    width: 100%;
+    position: relative;
+    background-color: white;
+    /* height: 100%;
+    overflow-y: auto; */
+    
+    }
+    
+    .wrap-box .head-popup {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    
+    }
+    
+    .wrap-box .head-popup .red-items{
+    width: 16px;
+    height: 36px;
+    border: 1px solid rgb(170, 12, 12);
+    background-color: rgb(170, 12, 12);
+    margin: 0 4px;
+    }
+    
+    .wrap-box .button-close{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    font-size: larger;
+    cursor: pointer;
+    }
+    
+    
+    
+    .wrap-box hr{
+    border-color: #292a2b;
+    /* z-index: 6; */
+    }
+    
+    .wrap-text-box{
+    padding-left: 20px;
+    }
+    
+    .wrap-text-box .row-popup div{
+    cursor: pointer;
+    padding-bottom: 8px;
+    }
+    
+    .wrap-text-box .row-popup div:hover{
+    text-decoration: underline;
+    text-decoration-color: rgb(228, 9, 9);
+    }
+    
+    /* footer popup right desktop---------------------- */
+    
+    .footer-popup{
+    padding-top: 36px;
+    width: 100%;
+    background-color: #202124;
+    /* margin-top: 16px; */
+    }
+    
+    .footer-popup .wrap-icons-popup{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    }
+    
+    .footer-popup .wrap-icons-popup div i {
+    color: white;
+    margin: 0 8px;
+    font-size: 36px;
+    transition: transform 1s ease;
+    }
+    
+    .footer-popup .wrap-icons-popup div:hover i{
+    transform: rotate(360deg);
+    }
+    
+    
+    .footer-popup hr{
+    border-color: #ffffff;
+    margin-top: 36px;
+    }
+    
+    .footer-popup div {
+    display: flex;
+    justify-content: center;
+    }
+    
+    .footer-popup div p {
+    color: #dddada;
+    font-size: small;
+    
+    }
+    
+    .logo-foot-popup{
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    
+    }
+    
+    .logo-foot-popup .red-items{
+    width: 16px;
+    height: 36px;
+    border: 1px solid rgb(253, 251, 251);
+    background-color: rgb(255, 255, 255);
+    margin: 0 4px;
+    }
+    
+    /* LEFT-POPUP-MOBILE */
+    
+    .left-popup-mobile{
+    display: none;
+    }
+    
+    @media screen and (max-width: 1663px) {
+    .header-top{
+      width: 100%;
+      height: auto;
+      padding: 10px 0;
+      border-bottom: .5px solid black;
+      position: sticky;
+      top:0;
+      background-color: white;
+      z-index: 5;
+    }
+    
+    .container-fluid{
+      width: 85%;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .item {
+      padding: 8px 8px;
+     width: 100%;
+     height: 480px;
+     box-shadow: 0 4px 5px rgba(0, 0, 0.2, 0.2);
+     border: 1px solid rgb(218, 216, 216);
+     position: relative;
+    }
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    @media screen and (max-width: 768px){
+    
+      .container-fluid{
+          width: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+      }
+    
+      /* left-header */
+      .left-header-top{
+          width: calc(100%/3);
+      }
+    
+    .left-header-top .logo-kfc img{
+          display: none;
+      }
+    
+    .left-header-top .logo-kfc .see-more {
+      display: block;    
+    }
+    
+    .left-header-top .list-options{
+      display: none;
+    }
+    
+    /* center-header-top MOBILE----------- */
+    
+    .center-header-mobile-logo{
+      display: block;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .center-header-mobile-logo img{
+      width: 90px;
+    }
+    
+    .center-header-mobile-logo{
+      width: calc(100%/3);
+    }
+    
+    
+    /* right-header-top */
+    .right-header-top{
+      width: calc(100%/3);
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .right-header-top .button-booking{
+      display: none;
+    }
+    
+    .right-header-top div:nth-child(4){
+      margin-right: 0;
+    }
+    
+    .right-header-top div:last-child{
+      display: none;
+    }
+    
+    /* slide - first cáoel ----------------- */
+    
+    .first-slide div img{
+    width: 100%;
+    height: auto;
+    /* object-fit: fill; */
+    }
+    
+    /* booking-MOBILE */
+    
+    .booking{
+      position: fixed;
+      bottom: 0;
+      z-index: 6;
+      padding: 12px 0;
+      justify-content: center;
+    }
+    
+    .booking .button-order-booking{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .booking .button-order-booking button{
+      width: 90%;
+    }
+    
+    /* <!-- list-name-menu --> */
+    
+    .list-name-menu {
+      width: 100%;
+    }
+    
+    .list-name-menu .container{
+      max-width: 739px;
+    }
+    
+    .list-name-menu .container .row{
+      width: 100%;
+    }
+    
+    /* slide-food------------------------ */
+    
+    .box-suggestion{
+    width: 100%;
+    }
+    
+    .wrap-box-suggestion {
+    max-width: 739px;
+    }
+    
+    .item {
+    height: 550px;
+    }
+    
+    /* banner-ads-download ------------- */
+    
+    .banner-download{
+    width: 100%;
+    position: relative;
+    }
+    
+    .banner-download .background-img img{
+    width: 100%;
+    }
+    
+    .banner-download .devices-chplay{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    }
+    
+    .banner-download .devices-ios{
+    position: absolute;
+    top: 80px;
+    right: 100px;
+    }
+    
+    /* FOOTER SECTION-------------------------------------- */
+    
+    .footer-main{
+    width: 100%;
+    padding: 30px 10px 0 10px;
+    }
+    
+    .wrap-container{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    
+    .footer-main .container{
+    max-width: 768px;
+    }
+    
+    .wrap-container .column:not(:last-child){
+    width: 100%;
+    border-bottom: 1px solid rgb(129, 128, 128);
+    margin-bottom: 36px;
+    
+    }
+    
+    .wrap-container .column .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    /* position: relative; */
+    }
+    
+    .wrap-container .column .title i{
+    color: #FFFFFF;
+    transition: transform 0.2s ease-in-out;
+    }
+    
+    .wrap-container .active .title i{
+    transform: rotate(180deg);
+    }
+    
+    .wrap-container .column ul{
+    display: none;
+    }
+    
+    .wrap-container .active ul{
+    display: block;
+    }
+    
+    /* popup see more --------- */
+    
+    .right-box-see-more {
+    display: none;
+    }
+    /* LEFT - POPUP - MOBILE */
+    
+    .left-popup-mobile{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    
+    }
+    
+    .left-popup-mobile .container-mobile{
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 8px 0 8px;
+    }
+    
+    .wrap-left-popup{
+    display: flex;
+    justify-content: space-between;
+    }
+    
+    .wrap-left-popup .head-popup{
+    display: flex;
+    }
+    
+    .wrap-left-popup .head-popup .red-items{
+    width: 16px;
+    height: 36px;
+    border: 1px solid rgb(170, 12, 12);
+    background-color: rgb(170, 12, 12);
+    margin: 0 4px;
+    }
+    
+    .items-left-popup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F7F5;
+    border-radius: 4px;
+    padding-left: 24px;
+    margin-top: 24px;
+    }
+    
+    .items-left-popup .name-page{
+    font-size: 16px;
+    font-weight: bold;
+    
+    }
+    
+    /* footer-left-popup */
+    
+    .footer-left-popup{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #202124;
+    height: auto;
+    padding-top: 30px;
+    
+    
+    }
+    
+    .footer-left-popup .wrap-icons-popup{
+    display: flex;
+    justify-content: center;
+    
+    }
+    
+    .wrap-icons-popup div i {
+    color: white;
+    margin: 0 8px;
+    font-size: 36px;
+    transition: transform 1s ease;
+    }
+    
+    .wrap-icons-popup div:hover i{
+    transform: rotate(360deg);
+    }
+    
+    .text-footer-left-popup{
+    display: flex;
+    justify-content: center;
+    }
+    
+    .footer-left-popup hr{
+    color: #dddada;
+    }
+    
+    .text-footer-left-popup p{
+    color: #dddada;
+    }
+    
+    }
+    
+    /* MOBILE -SCREEN SMALLER-------------------------- */
+    
+    @media screen and (max-width: 539px){
+        /* ban do he thong cua hang */
+    
+    .box-name-food {
+      border-radius: 8px;
+      box-shadow: 0 4px 5px rgba(0.2, 0.2, 0.2, 0.2);
+      margin-bottom: 12px;
+      height: 240px;
+    }
+    
+    .box-name-food .images{
+      overflow: hidden;
+    }
+    
+    .box-name-food .images img{
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    .box-name-food .images:hover img{
+      transform: scale(1.2);
+    }
+    
+    .box-name-food .name-main h5{
+      padding: 20px 12px;
+      color: black;
+      font-weight: 700;
+    }
+    
+    .row{
+      margin-bottom: 20px;
+    }
+    
+    /* banner-download ------------- */
+    .banner-download{
+      display: none;
+    }
+    
+    /* second-slides-suggest foods */
+    
+    .box-suggestion{
+      width: 100%;
+    }
+    
+    
+    
+    .item {
+      height: 430px;
+    }
+    
+    /* Footer --------------- */
+    .footer-main .container{
+      max-width: 539px;
+    }
+    
+    .box-social-icons div {
+      flex-wrap: wrap;
+    }
+    
+    .box-social-icons div{
+      margin-top: 20px;
+    }
+    
+    .right-box-address {
+      display: none;
+    }
+    }

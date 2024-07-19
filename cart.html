@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dịch Vụ Tiệc</title>
-    <!-- import boostrap -->
-    <link rel="stylesheet" href="./lib/boostrap/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
-    <!-- import css -->
-     <link rel="stylesheet" href="./assets/css/partyService.css">
+    <title>Giỏ hàng</title>
+     <!-- import boostrap -->
+     <link rel="stylesheet" href="./lib/boostrap/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+     <!-- import css -->
+     <link rel="stylesheet" href="./assets/css/cart.css">
      <!-- import fontawesome -->
-    <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/fontawesome.css">
-    <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/brands.css">
-    <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/solid.css">
-    <!-- import carousel -->
-    <link rel="stylesheet" href="./lib/carousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./lib/carousel/assets/owl.theme.default.min.css">
+     <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/fontawesome.css">
+     <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/brands.css">
+     <link rel="stylesheet" href="./lib/fontAwesome/fontawesome-free-6.5.2-web/css/solid.css">
+     <!-- import carousel -->
+     <link rel="stylesheet" href="./lib/carousel/assets/owl.carousel.min.css">
+     <link rel="stylesheet" href="./lib/carousel/assets/owl.theme.default.min.css">
 </head>
 <body>
     <div class="header-top">
@@ -35,7 +35,7 @@
                             <a href="orderMenu.html">KHUYẾN MÃI</a>
                         </li>
                         <li>
-                            <a href="#">DỊCH VỤ TIỆC</a>
+                            <a href="partyService.html">DỊCH VỤ TIỆC</a>
                         </li>
                         <li>
                             <a href="mapStore.html">HỆ THỐNG NHÀ HÀNG</a>
@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="center-header-mobile-logo">
-                <a href="index.html"><img src="./assets/images/logo-kfc-mobile2.png" alt="logo-moblie"></a>
+                <img src="./assets/images/logo-kfc-mobile2.png" alt="logo-moblie">
             </div>
             <div class="right-header-top">
                 <div class="button-booking">
@@ -65,29 +65,19 @@
             </div>
         </div>
     </div>
-    <!-- center - party -->
-
-    <div class="container-party">
-        <h2>ĐẶT TIỆC</h2>
-        <div class="wrap-container-fluid">
-            <div class="party-service">
-                <h6 id="create" class="current-service .create-party-service" onclick="handleClickFirstService()">TỔ CHỨC TIỆC</h6>
-                <h6 id="special" class="special-service" onclick="handleClickSecondService()">ĐƠN HÀNG LỚN & ĐẶT TIỆC TẬN NƠI</h6>
-            </div>
-            <div class="memory-text-kfc">
-                <div class="red-text">BUỔI TIỆC KHÓ QUÊN CÙNG NHỮNG MÓN NGON TỪ KFC</div>
-                <div class="promise-text">Chúng tôi sẵn sàng phục vụ mọi bữa tiệc của bạn.</div>
-            </div>
-            <div class="img-service-party">
-                <img src="./assets/images/Annotation 2024-07-20 010454.png" alt="sercive-party">
-            </div>
-            <div class="button-booking-party">
-                <button onclick="handleBookParty()">Đặt ngay</button>
-            </div>
+    <div class="box-bill">
+        <div class="wrap-bill">
+            <table id="box-table">
+                <tr>
+                 <th>Tên Món</th>
+                 <th>Giá Tiền</th>
+                 <th>Thành Tiền</th>
+                </tr>
+             </table>
         </div>
     </div>
-    <!-- Footer-section ------- -->
-    <div class="footer-main">
+     <!-- Footer-section ------- -->
+     <div class="footer-main">
         <div class="container">
             <div class="wrap-container">
                 <div class="column">
@@ -353,10 +343,7 @@
 
     <!-- import boostrap -->
     <script src="./lib/boostrap/bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- import carousel -->
-    <script src="./lib/jquery-3.7.1.min.js"></script>
-    <script src="./lib/carousel/owl.carousel.min.js"></script>
-    <!-- import js -->
-     <script src="./assets/js/partyService.js"></script>
+       <!-- import js -->
+<script src="./assets/js/orderMenu.js"></script>
 </body>
 </html>

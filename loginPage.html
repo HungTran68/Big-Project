@@ -17,128 +17,53 @@
 
 <body>
     <div class="header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-12 col-sm-12">
-                    <div class="wrap-header-top">
-                        <!-- left-header -->
-                        <div class="left-header-top">
-                            <div class="logo-kfc">
-                                <img src="./assets/images/kfc-logo.svg" alt="logo">
-                            </div>
-                            <div class="list-options">
-                                <ul>
-                                    <li>
-                                        <a href="orderMenu.html">THỰC ĐƠN</a>
-                                    </li>
-                                    <li>
-                                        <a href="orderMenu.html">KHUYẾN MÃI</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">DỊCH VỤ TIỆC</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">HỆ THỐNG NHÀ HÀNG</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- right-header -->
-                        <div class="right-header-top">
-                            <div class="button-booking">
-                                <button id="btn-booking">Bắt đầu đặt hàng</button>
-                            </div>
-                            <div class="language">
-                                English
-                            </div>
-                            <div class="user">
-                                <i class="fa-solid fa-circle-user fa-lg"></i>
-                            </div>
-                            <div class="cart">
-                                <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
-                            </div>
-                            <div class="list-menu" onClick="handleClickSeeMore()">
-                                <i class="fa-solid fa-bars fa-lg"></i>
-                            </div>
-                        </div>
-                        <!-- popup -->
-                        <div id="right-box-see-more" class="right-box-see-more">
-                            <div class="wrap-box">
-                                <div class="head-popup">
-                                    <div class="red-items"></div>
-                                    <div class="red-items"></div>
-                                    <div class="red-items"></div>
-                                </div>
-                                <div class="button-close" onClick="handleClickButtonClosePopup()">X</div>
-                                <hr>
-                                <div class="wrap-text-box">
-                                    <div class="row-popup">
-                                        <h5>Danh Mục Món Ăn</h5>
-                                        <div>Món Mới ></div>
-                                        <div>Combo Nhóm ></div>
-                                        <div>Gà Rán - Gà Quay ></div>
-                                        <div>Burger - Cơm - Mì Ý ></div>
-                                        <div>Thức Ăn Nhẹ ></div>
-                                        <div>Thức Uống & Tráng Miệng ></div>
-                                    </div>
-                                    <hr>
-                                    <div class="row-popup">
-                                        <h5>Về KFC</h5>
-                                        <div>Câu Chuyện Của Chúng Tôi ></div>
-                                        <div>Tin Khuyến Mãi ></div>
-                                        <div>Tin Tức KFC ></div>
-                                        <div>Tuyển Dụng ></div>
-                                        <div>Đặt Tiệc Sinh Nhật ></div>
-                                    </div>
-                                    <hr>
-                                    <div class="row-popup">
-                                        <h5>Theo Dõi Đơn Hàng ></h5>
-                                        <div>Hệ Thống Nhà Hàng ></div>
-                                        <div>Liên Hệ KFC ></div>
-
-                                    </div>
-                                    <hr>
-                                    <div class="row-popup">
-                                        <h5>Chính Sách ></h5>
-                                        <div>Chính Sách Hoạt Động ></div>
-                                        <div>Chính Sách và quy định ></div>
-                                        <div>Chính sách bảo mật thông tin ></div>
-                                    </div>
-                                </div>
-                                <div class="footer-popup">
-                                    <div class="wrap-icons-popup">
-                                        <div>
-                                            <i class="fa-brands fa-square-facebook fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-brands fa-square-instagram fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-brands fa-square-youtube fa-lg"></i>
-                                        </div>
-                                        <div>
-                                            <i class="fa-brands fa-square-twitter fa-lg"></i>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div>
-                                        <p>Copyright © 2023 KFC Vietnam</p>
-                                    </div>
-                                    <div class="logo-foot-popup">
-                                        <div class="red-items"></div>
-                                        <div class="red-items"></div>
-                                        <div class="red-items"></div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
+        <div class="container-fluid">
+            <div class="left-header-top">
+                <div class="logo-kfc">
+                    <a href="index.html"><img src="./assets/images/kfc-logo.svg" alt="logo" ></a>
+                    <div class="see-more see-more-mobile" onclick="hanldeOpenPopupMobile()">
+                        <i class="fa-solid fa-bars fa-lg"></i>
                     </div>
+                </div>
+                <div class="list-options">
+                    <ul>
+                        <li>
+                            <a href="orderMenu.html">THỰC ĐƠN</a>
+                        </li>
+                        <li>
+                            <a href="orderMenu.html">KHUYẾN MÃI</a>
+                        </li>
+                        <li>
+                            <a href="#">DỊCH VỤ TIỆC</a>
+                        </li>
+                        <li>
+                            <a href="mapStore.html">HỆ THỐNG NHÀ HÀNG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="center-header-mobile-logo">
+                <img src="./assets/images/logo-kfc-mobile2.png" alt="logo-moblie">
+            </div>
+            <div class="right-header-top">
+                <div class="button-booking">
+                    <button id="btn-booking">Bắt đầu đặt hàng</button>
+                </div>
+                <div class="language">
+                    English
+                </div>
+                <div class="user">
+                    <i class="fa-solid fa-circle-user fa-lg"></i>
+                </div>
+                <div class="cart">
+                    <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
+                </div>
+                <div class="list-menu" onclick="handleClickSeeMore()">
+                    <i class="fa-solid fa-bars fa-lg"></i>
                 </div>
             </div>
         </div>
-        <hr>
+    </div>
         <!-- box-login -->
         <div class="container">
             <div class="row">
@@ -170,37 +95,58 @@
         <div class="container">
             <div class="wrap-container">
                 <div class="column">
-                    <h6>Danh Mục Món Ăn</h6>
-                    <div>Món Mới</div>
-                    <div>Combo Nhóm</div>
-                    <div>Gà Rán - Gà Quay</div>
-                    <div>Burger - Cơm - Mì Ý</div>
-                    <div>Thức Ăn Nhẹ</div>
-                    <div>Thức Uống & Tráng Miệng</div>
+                    <div class="title">
+                        <h6>Danh Mục Món Ăn</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="ul">
+                        <li>Món Mới</li>
+                        <li>Combo Nhóm</li>
+                        <li>Gà Rán - Gà Quay</li>
+                        <li>Burger - Cơm - Mì Ý</li>
+                        <li>Thức Ăn Nhẹ</li>
+                        <li>Thức Uống & Tráng Miệng</li>
+                    </ul>
                 </div>
                 <div class="column">
-                    <h6>Về KFC</h6>
-                    <div>Câu Chuyện Của Chúng Tôi</div>
-                    <div>Tin Khuyến Mãi</div>
-                    <div>Tin Tức KFC</div>
-                    <div>Tuyển Dụng</div>
-                    <div>Đặt Tiệc Sinh Nhật</div>
-                </div>
-                <div class="column">
-                    <h6>Theo Dõi Đơn Hàng</h6>
-                    <div>Hệ Thống Nhà Hàng</div>
-                    <div>Liên Hệ KFC</div>
+                    <div class="title">
+                        <h6>Về KFC</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
 
+                    <ul class="ul">
+                        <li>Câu Chuyện Của Chúng Tôi</li>
+                        <li>Tin Khuyến Mãi</li>
+                        <li>Tin Tức KFC</li>
+                        <li>Tuyển Dụng</li>
+                        <li>Đặt Tiệc Sinh Nhật</li>
+                    </ul>
                 </div>
                 <div class="column">
-                    <h6>Chính Sách</h6>
-                    <div>Chính Sách Hoạt Động</div>
-                    <div>Chính Sách và quy định</div>
-                    <div>Chính sách bảo mật thông tin</div>
-
+                    <div class="title">
+                        <h6>Theo Dõi Đơn Hàng</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="ul">
+                        <li>Hệ Thống Nhà Hàng</li>
+                        <li>Liên Hệ KFC</li>
+                    </ul>
                 </div>
                 <div class="column">
-                    <h6>Download App</h6>
+                    <div class="title">
+                        <h6>Chính Sách</h6>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul class="ul">
+                        <li>Chính Sách Hoạt Động</li>
+                        <li>Chính Sách và quy định</li>
+                        <li>Chính sách bảo mật thông tin</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <div class="title">
+                        <h6>Download App</h6>
+                    </div>
                     <div class="wrap-devides">
                         <div><img src="./assets/images/logo_appstore.png"></div>
                         <div><img src="./assets/images/logo_playstore.png"></div>
@@ -231,39 +177,184 @@
 
                 </div>
             </div>
-        <hr>
+            <hr>
         </div>
         <div class="container">
             <div class="wrap-footer-container">
                 <!-- address -->
-        <div class="box-address">
-            <div class="left-box-address">
-                <h2> CÔNG TY LIÊN DOANH TNHH KFC VIỆT NAM</h2>
-                <div>Số 292 Bà Triệu, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội.</div>
-                <div>Điện thoại: (028) 38489828</div>
-                <div>Email: lienhe@kfcvietnam.com.vn</div>
-                <div>Mã số thuế: 0100773885</div>
-                <div>Ngày cấp: 29/10/1998 - Nơi cấp: Cục Thuế Thành Phố Hà Nội</div>
-            </div>
-            <div class="right-box-address">
-                <img src="./assets/images/logo_footer.png">
-            </div>
-        </div>
+                <div class="box-address">
+                    <div class="left-box-address">
+                        <h2> CÔNG TY LIÊN DOANH TNHH KFC VIỆT NAM</h2>
+                        <div>Số 292 Bà Triệu, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội.</div>
+                        <div>Điện thoại: (028) 38489828</div>
+                        <div>Email: lienhe@kfcvietnam.com.vn</div>
+                        <div>Mã số thuế: 0100773885</div>
+                        <div>Ngày cấp: 29/10/1998 - Nơi cấp: Cục Thuế Thành Phố Hà Nội</div>
+                    </div>
+                    <div class="right-box-address">
+                        <img src="./assets/images/logo_footer.png">
+                    </div>
+                </div>
             </div>
             <div class="last-box">
                 <div class="items">
 
                 </div>
                 <div class="items">
-                    
+
                 </div>
                 <div class="items">
-                    
+
                 </div>
             </div>
         </div>
-        
+
     </div>
+    <!-- popup tablet-desktop -->
+    <div id="right-box-see-more" class="right-box-see-more">
+        <div class="wrap-box">
+            <div class="head-popup">
+                <div class="red-items"></div>
+                <div class="red-items"></div>
+                <div class="red-items"></div>
+            </div>
+            <div class="button-close" onClick="handleClickButtonClosePopup()">X</div>
+            <hr>
+            <div class="wrap-text-box">
+                <div class="row-popup">
+                    <h5>Danh Mục Món Ăn</h5>
+                    <div>Món Mới ></div>
+                    <div>Combo Nhóm ></div>
+                    <div>Gà Rán - Gà Quay ></div>
+                    <div>Burger - Cơm - Mì Ý ></div>
+                    <div>Thức Ăn Nhẹ ></div>
+                    <div>Thức Uống & Tráng Miệng ></div>
+                </div>
+                <hr>
+                <div class="row-popup">
+                    <h5>Về KFC</h5>
+                    <div>Câu Chuyện Của Chúng Tôi ></div>
+                    <div>Tin Khuyến Mãi ></div>
+                    <div>Tin Tức KFC ></div>
+                    <div>Tuyển Dụng ></div>
+                    <div>Đặt Tiệc Sinh Nhật ></div>
+                </div>
+                <hr>
+                <div class="row-popup">
+                    <h5>Theo Dõi Đơn Hàng ></h5>
+                    <div>Hệ Thống Nhà Hàng ></div>
+                    <div>Liên Hệ KFC ></div>
+                    
+                </div>
+                <hr>
+                <div class="row-popup">
+                    <h5>Chính Sách ></h5>
+                    <div>Chính Sách Hoạt Động ></div>
+                    <div>Chính Sách và quy định ></div>
+                    <div>Chính sách bảo mật thông tin ></div>
+                </div>
+            </div>
+            <div class="footer-popup">
+                <div class="wrap-icons-popup">
+                    <div>
+                        <i class="fa-brands fa-square-facebook fa-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-instagram fa-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-youtube fa-lg"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-square-twitter fa-lg"></i>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <p>Copyright © 2023 KFC Vietnam</p>
+                </div>
+                <div class="logo-foot-popup">
+                    <div class="red-items"></div>
+                    <div class="red-items"></div>
+                    <div class="red-items"></div>
+                </div>
+
+            </div>
+            
+        </div>
+     </div>
+     <!-- popup-left - mobile -->
+      <div class="left-popup-mobile">
+        <div class="container-mobile">
+            <div class="head-popup wrap-left-popup">
+                <div class="btn-close-popup-mobile" onclick="handleClickCloseLeftPopup()">X</div>
+                <div class="head-popup">
+                    <div class="red-items"></div>
+                    <div class="red-items"></div>
+                    <div class="red-items"></div>
+                </div>
+                <div class="cart-popup-mobile">
+                    <i class="fa-solid fa-cart-arrow-down fa-lg"></i>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container-mobile">
+            <h2>BẮT ĐẦU</h2>
+            <h6>Đăng nhập / Đăng ký <span><i class="fa-solid fa-arrow-right-long"></i></span> </h6>
+            <div class="items-left-popup">
+                <div class="name-page">THỰC ĐƠN</div>
+                <div class="image-page">
+                    <img src="./assets/images/menu.webp" alt="menu">
+                </div>
+            </div>
+            <div class="items-left-popup">
+                <div class="name-page">KHUYẾN MÃI</div>
+                <div class="image-page">
+                    <img src="./assets/images/deal.webp" alt="deal">
+                </div>
+            </div>
+            <div class="items-left-popup">
+                <div class="name-page">DỊCH VỤ TIỆC</div>
+                <div class="image-page">
+                    <img src="./assets/images/kfc-party.webp" alt="party">
+                </div>
+            </div>
+            <div class="items-left-popup">
+                <div class="name-page">HỆ THỐNG CỦA HÀNG</div>
+                <div class="image-page">
+                    <img src="./assets/images/find-kfc.webp" alt="findshop">
+                </div>
+            </div>
+            <div class="items-left-popup">
+                <div class="name-page">VỀ KFC</div>
+                <div class="image-page">
+                    <img src="./assets/images/about-kfc.webp" alt="aboutkfc">
+                </div>
+            </div>           
+        </div>
+        <div class="footer-left-popup">
+            <div class="wrap-icons-popup">
+                <div>
+                    <i class="fa-brands fa-square-facebook fa-lg"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-instagram fa-lg"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-youtube fa-lg"></i>
+                </div>
+                <div>
+                    <i class="fa-brands fa-square-twitter fa-lg"></i>
+                </div>
+            </div>
+            <hr>
+            <div class="text-footer-left-popup">
+                <p>Copyright © 2023 KFC Vietnam</p>
+            </div>
+        </div>
+      </div>
+
 
     <!-- import js -->
      <script src="./assets/js/loginPage.js"></script>

@@ -61,6 +61,19 @@
    window.location.href = 'loginPage.html';
  }
  )
+
+ let btnBookHeader = document.getElementById("btn-booking");
+console.log(btnBookHeader);
+
+btnBookHeader.addEventListener('click',() => {
+  window.location.href = 'loginPage.html';
+})
+
+let btnBooking = document.querySelector(".button-order-booking");
+
+btnBooking.addEventListener('click',() => {
+  window.location.href = 'loginPage.html';
+})
  
 
  
@@ -112,6 +125,8 @@ const newsGroup = document.querySelector(".new-items-group");
 const teamGroup = document.querySelector(".team-combo-items");
 const checkenGroup = document.querySelector(".chicken-combo-items") ;
 
+let coppyArray;
+
 async function fetchAndShowMenuItems() {
   try {
     const response = await fetch(url);
@@ -123,12 +138,14 @@ async function fetchAndShowMenuItems() {
     // showMenuItem(menuItems)
     
     filterComboItems(menuItems);
+    coppyArray = menuItems;
   } catch (error) {
     console.error('Fetch error:', error);
     rowJs.innerHTML = '<p>Chưa tải được thực đơn.</p>'; 
   }
 }
 
+console.log('--------------- day',coppyArray);
 // split array with combo
 
 const filterComboItems = (arr) => {
@@ -154,10 +171,50 @@ const filterComboItems = (arr) => {
   displayChickenFoodItems(chickenItems)
 }
 
+// const displayDealItems = (dealItems) => {
+//   let html = '';
+//   dealItems.forEach(item => {
+//     let newColomn = document.createElement('div');
+//     newColomn.className = "col-6 col-md-3 col-sm-6";
+//     let boxItem = document.createElement("div");
+//     boxItem.className= "box-item";
+//     newColomn.appendChild(boxItem);
+//     let divImage = document.createElement('div');
+//     divImage.className = "images-item";
+//     boxItem.appendChild(divImage);
+//     let tagImg = document.createElement("img");
+//     tagImg.src = `${item.img}`;
+//     tagImg.alt = `${item.name}`
+//     divImage.appendChild(tagImg);
+
+//     let namePrice = document.createElement("div");
+//     namePrice.className = "name-price"
+//     let foodName = document.createElement("div");
+//     foodName.className = "food-name";
+//     foodName.innerHTML = `${item.name}`
+//     namePrice.appendChild(foodName);
+//     let foodPrice = document.createElement("div");
+//     foodPrice.className = "food-price";
+//     foodPrice.innerHTML = `${item.price}`
+//     namePrice.appendChild(foodPrice);
+//     boxItem.appendChild(namePrice)
+
+//     let description = document.createElement("div");
+//     description.className= "info-food";
+//     description.innerHTML = `${item.description}`;
+
+//   })
+//   dealsGroup.innerHTML = html;
+// }
+
+// const dealsGroup = document.getElementById("dealsGroup");
+
+
 
 const displayDealItems = (dealItems) => {
   let html = '';
-  dealItems.forEach(item => {
+  dealItems.forEach((item, index) => {
+    console.log('index:',index)
     html += `
       <div class="col-6 col-md-3 col-sm-6">
         <div class="box-item">
@@ -170,7 +227,7 @@ const displayDealItems = (dealItems) => {
           </div>
           <div class="info-food">${item.description}</div>
           <div class="btn-add">
-            <button>Đặt hàng</button>
+            <button onclick ="handeClickBookFoods('${encodeURIComponent(JSON.stringify(item))}')">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -179,10 +236,45 @@ const displayDealItems = (dealItems) => {
   })
   dealsGroup.innerHTML = html;
 }
+// handleClikcbutton
+
+let itemsPicked = [];
+
+const handeClickBookFoods = (objettItem) =>{
+  // console.log(dealItems);
+  
+  let itemAdded = JSON.parse(decodeURIComponent(objettItem));
+  itemsPicked.push(itemAdded);
+  console.log('added:',itemsPicked);
+  handleCreateTableFromArray(itemAdded)
+  
+}
+
+const handleCreateTableFromArray = (arr) => {
+  let vocabularyTable = document.getElementById('box-table');
+  handleDeleteAllRowsIncludeHeader(vocabularyTable);
+  for (let i =0; i< arr.length; i++){
+      let myTable = document.getElementById('box-table');
+      let newRow = document.createElement('tr');
+      myTable.appendChild(newRow);
+
+      let firstCol = document.createElement('td');
+        let contentFirstCol = document.createTextNode(arr[i].name);
+        firstCol.appendChild(contentFirstCol);
+        newRow.appendChild(firstCol);
+
+        let secondCol = document.createElement('td');
+        let contentSecondCol = document.createTextNode(arr[i].price);
+        secondCol.appendChild(contentSecondCol);
+        newRow.appendChild(firstCol);
+  }}
+
+
+
 
 const displaySingleCombo = (singleCombo) => {
   let html = '';
-  singleCombo.forEach(item => {
+  singleCombo.forEach((item,index) => {
     html += `
       <div class="col-6 col-md-3 col-sm-6">
         <div class="box-item">
@@ -195,7 +287,7 @@ const displaySingleCombo = (singleCombo) => {
           </div>
           <div class="info-food">${item.description}</div>
           <div class="btn-add">
-            <button>Đặt hàng</button>
+            <button id="bookingBtn" onclick ="handeClickBookFoods('${encodeURIComponent(JSON.stringify(item))}')">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -221,7 +313,7 @@ const displayNewItemsCombo = (newItemsCombo) => {
           </div>
           <div class="info-food">${item.description}</div>
           <div class="btn-add">
-            <button>Đặt hàng</button>
+            <button id="bookingBtn" onclick ="handeClickBookFoods('${encodeURIComponent(JSON.stringify(item))}')">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -246,7 +338,7 @@ const displayComboTeam = (teamItems) => {
           </div>
           <div class="info-food">${item.description}</div>
           <div class="btn-add">
-            <button>Đặt hàng</button>
+            <button id="bookingBtn" onclick ="handeClickBookFoods('${encodeURIComponent(JSON.stringify(item))}')">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -271,7 +363,7 @@ const displayChickenFoodItems = (chickenItems) => {
           </div>
           <div class="info-food">${item.description}</div>
           <div class="btn-add">
-            <button>Đặt hàng</button>
+            <button id="bookingBtn" onclick ="handeClickBookFoods('${encodeURIComponent(JSON.stringify(item))}')">Đặt hàng</button>
           </div>
         </div>
       </div>
@@ -280,6 +372,10 @@ const displayChickenFoodItems = (chickenItems) => {
   })
   checkenGroup.innerHTML = html;
 }
+
+
+// cart
+
 
 
 
@@ -334,7 +430,7 @@ const showPrevChevronMenu = () => {
   }
   else if (quantityClick >= 1 ){
     prevBtn.style.display = 'block';
-    if(quantityClick >= 14){
+    if(quantityClick >= 16){
       nextBtn.style.display = 'none';
     }
     else{
@@ -367,4 +463,8 @@ prevBtn.addEventListener('click', () => {
   console.log('hihi');
   showPrevChevronMenu();
 });
+
+
+
+
 

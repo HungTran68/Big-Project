@@ -76,7 +76,6 @@ btnBooking.addEventListener('click',() => {
 })
 
 
-
 window.onscroll = () => {
   const scrollTop = document.documentElement.scrollTop ?? document.body.scrollTop;
   const lengthScroll = 400;

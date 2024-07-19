@@ -105,6 +105,19 @@ loginPage.addEventListener('click', () => {
 }
 )
 
+let btnBookHeader = document.getElementById("btn-booking");
+console.log(btnBookHeader);
+
+btnBookHeader.addEventListener('click',() => {
+  window.location.href = 'loginPage.html';
+})
+
+let btnBooking = document.querySelector(".button-order-booking");
+
+btnBooking.addEventListener('click',() => {
+  window.location.href = 'loginPage.html';
+})
+
 
 
 window.onscroll = () => {
