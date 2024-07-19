@@ -380,35 +380,6 @@ const displayChickenFoodItems = (chickenItems) => {
 
 
 
-
-
-
-// showMenuItem(menuItems);
-
-// function showMenuItems(menuItems) {
-//   let html = '';
-//   menuItems.forEach(item => {
-//     html += `
-//       <div class="col-6 col-md-3 col-sm-6">
-//         <div class="box-item">
-//           <div class="images-item">
-//             <img src="${item.img}" alt="${item.name}">
-//           </div>
-//           <div class="name-price">
-//             <div class="food-name">${item.name}</div>
-//             <div class="food-price">${item.price} đ</div> 
-//           </div>
-//           <div class="info-food">${item.description}</div>
-//           <div class="btn-add">
-//             <button>Đặt hàng</button>
-//           </div>
-//         </div>
-//       </div>
-//     `;
-//   });
-//   rowJs.innerHTML = html;
-// }
-
 fetchAndShowMenuItems(); 
 
 // menu-ngang
@@ -451,7 +422,7 @@ nextBtn.addEventListener('click', () => {
   quantityClick += 1;
   currentPosition -= 30; 
   container.style.transform = `translateX(${currentPosition}px)`;
-  console.log("22222")
+  
   console.log('quantity',quantityClick);
   showPrevChevronMenu();
 });
